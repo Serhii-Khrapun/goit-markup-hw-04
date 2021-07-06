@@ -8,11 +8,16 @@
   --logo-color: #000000;
   --button-color: #188ce8;
   --icons-color: #afb1b8;
+  --social-color: rgba(255, 255, 255, 0.1);
   --contacts-color: rgba(255, 255, 255, 0.6);
   --gradient-color: rgba(47, 48, 58, 0.4);
   --container-color: #f5f4fa;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  --btn-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --portfolio-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .list {
   list-style: none;
@@ -156,6 +161,8 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin: auto;
   background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
     url(../images/hero/hero.jpg);
 }
@@ -352,13 +359,24 @@ img {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
-
+.icon-customers {
+  fill: var(--second-color);
+}
+.customers-link:hover .icon-customers,
+.customers-link:focus .icon-customers {
+  fill: var(--accent-color);
+}
 /*=======END CUSTOMERS=======*/
 /*=======FOOTER=========*/
 .footer {
   background-color: var(--footer-color);
+}
+.footer-nav {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.join {
+  padding-top: 72px;
 }
 .footer-logo {
   display: inline-block;
@@ -399,7 +417,44 @@ img {
 .footer-contact:focus {
   color: var(--accent-color);
 }
+.footer-content {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+.footer-container {
+  display: flex;
+}
 
+.join-list {
+  display: flex;
+}
+.footer-nav {
+  margin-right: 70px;
+}
+.icon-join {
+  fill: var(--third-color);
+}
+.join-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--social-color);
+}
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--accent-color);
+}
+.join-item:not(:last-child) {
+  margin-right: 10px;
+}
 /*=======END FOOTER=========*/
 /*=======PORTFOLIO=========*/
 .portfolio-filter {
@@ -426,6 +481,7 @@ img {
 .filter-btn:focus {
   color: var(--third-color);
   background-color: var(--accent-color);
+  box-shadow: var(--btn-shadow);
 }
 .portfolio-list {
   display: flex;
@@ -437,6 +493,10 @@ img {
   width: 370px;
   margin-top: 30px;
   margin-left: 30px;
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: var(--portfolio-shadow);
 }
 .project-card {
   padding: 20px 24px;
