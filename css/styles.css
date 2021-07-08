@@ -165,6 +165,8 @@ img {
   margin: auto;
   background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
     url(../images/hero/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title-hero {
@@ -360,7 +362,7 @@ img {
   border-color: var(--accent-color);
 }
 .icon-customers {
-  fill: var(--second-color);
+  fill: var(--icons-color);
 }
 .customers-link:hover .icon-customers,
 .customers-link:focus .icon-customers {
@@ -370,14 +372,10 @@ img {
 /*=======FOOTER=========*/
 .footer {
   background-color: var(--footer-color);
-}
-.footer-nav {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.join {
-  padding-top: 72px;
-}
+
 .footer-logo {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
@@ -428,6 +426,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .join-list {
@@ -494,8 +493,11 @@ img {
   margin-top: 30px;
   margin-left: 30px;
 }
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: var(--portfolio-shadow);
 }
 .project-card {
